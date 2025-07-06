@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>حراج اليمن</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #3498db;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .search-section {
+      padding: 20px;
+      text-align: center;
+      background: #ecf0f1;
+    }
+    .search-section input,
+    .search-section select {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+    .ads-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 20px;
+    }
+    .ad-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    .ad-card h3 {
+      margin: 0 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>حراج اليمن</header>
+
+<div class="search-section">
+  <input type="text" id="searchInput" placeholder="🔍 ابحث هنا...">
+  <select id="categorySelect">
+    <option value="">اختر القسم</option>
+    <option value="سيارات سيدان">سيارات سيدان</option>
+<option value="سيارات دفع رباعي">سيارات دفع رباعي</option>
+<option value="سيارات رياضية">سيارات رياضية</option>
+<option value="سيارات كلاسيكية">سيارات كلاسيكية</option>
+<option value="دراجات نارية">دراجات نارية</option>
+<option value="دراجات هوائية">دراجات هوائية</option>
+<option value="قطع غيار">قطع غيار</option>
+<option value="قوارب">قوارب</option>
+<option value="شاحنات">شاحنات</option>
+<option value="شقق للبيع">شقق للبيع</option>
+<option value="فلل">فلل</option>
+<option value="أراضي">أراضي</option>
+<option value="محلات تجارية">محلات تجارية</option>
+<option value="مزارع">مزارع</option>
+<option value="شقق للإيجار">شقق للإيجار</option>
+<option value="مفروشات">مفروشات</option>
+<option value="هواتف">هواتف</option>
+<option value="تابلت">تابلت</option>
+<option value="لابتوب">لابتوب</option>
+<option value="كمبيوتر">كمبيوتر</option>
+<option value="كاميرات">كاميرات</option>
+<option value="ألعاب إلكترونية">ألعاب إلكترونية</option>
+<option value="تلفزيونات">تلفزيونات</option>
+<option value="سماعات">سماعات</option>
+<option value="أثاث">أثاث</option>
+<option value="ديكور">ديكور</option>
+<option value="سجاد">سجاد</option>
+<option value="إضاءات">إضاءات</option>
+<option value="ملابس">ملابس</option>
+<option value="ساعات">ساعات</option>
+<option value="نظارات">نظارات</option>
+<option value="أحذية">أحذية</option>
+<option value="أطفال">أطفال</option>
+<option value="ألعاب أطفال">ألعاب أطفال</option>
+<option value="حيوانات">حيوانات</option>
+<option value="مستلزمات الحيوانات">مستلزمات الحيوانات</option>
+<option value="معدات رياضية">معدات رياضية</option>
+<option value="وظائف">وظائف</option>
+<option value="خدمات">خدمات</option>
+<option value="كتب">كتب</option>
+<option value="لوحات">لوحات</option>
+<option value="مقتنيات">مقتنيات</option>
+<option value="معدات مكتبية">معدات مكتبية</option>
+<option value="أدوات صناعية">أدوات صناعية</option>
+<option value="أخرى">أخرى</option>
+  </select>
+  <select id="locationSelect">
+    <option value="">اختر المحافظة</option>
+    <option value="أمانة العاصمة">أمانة العاصمة</option>
+<option value="عدن">عدن</option>
+<option value="تعز">تعز</option>
+<option value="الحديدة">الحديدة</option>
+<option value="إب">إب</option>
+<option value="ذمار">ذمار</option>
+<option value="حضرموت">حضرموت</option>
+<option value="عمران">عمران</option>
+<option value="صعدة">صعدة</option>
+<option value="البيضاء">البيضاء</option>
+<option value="الضالع">الضالع</option>
+<option value="المحويت">المحويت</option>
+<option value="المهرة">المهرة</option>
+<option value="ريمة">ريمة</option>
+<option value="شبوة">شبوة</option>
+<option value="أبين">أبين</option>
+<option value="لحج">لحج</option>
+<option value="الجوف">الجوف</option>
+<option value="مأرب">مأرب</option>
+<option value="حجة">حجة</option>
+<option value="سقطرى">سقطرى</option>
+  </select>
+  <button onclick="filterAds()">بحث</button>
+</div>
+
+<div class="ads-container" id="adsContainer">
+  <div class="ad-card" data-category="سيارات سيدان" data-location="صنعاء">
+    <h3>🚗 تويوتا كورولا للبيع</h3>
+    <p>الموقع: صنعاء</p>
+    <p>السعر: 8000$</p>
+  </div>
+  <div class="ad-card" data-category="شقق للبيع" data-location="عدن">
+    <h3>🏠 شقة جديدة للبيع</h3>
+    <p>الموقع: عدن</p>
+    <p>السعر: 40000$</p>
+  </div>
+</div>
+
+<script>
+function filterAds() {
+  const search = document.getElementById("searchInput").value.toLowerCase();
+  const category = document.getElementById("categorySelect").value;
+  const location = document.getElementById("locationSelect").value;
+  const ads = document.querySelectorAll(".ad-card");
+
+  ads.forEach(ad => {
+    const matchesText = ad.textContent.toLowerCase().includes(search);
+    const matchesCategory = !category || ad.dataset.category === category;
+    const matchesLocation = !location || ad.dataset.location === location;
+
+    ad.style.display = (matchesText && matchesCategory && matchesLocation) ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
