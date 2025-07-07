@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>حراج اليمن</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    حراج اليمن
+    <button class="add-btn" onclick="showModal()">أضف إعلان</button>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" placeholder="ابحث هنا...">
+    <select>
+      <option>اختر القسم</option>
+      <option>سيارات</option>
+      <option>شقق</option>
+      <option>أراضي</option>
+      <option>الكترونيات</option>
+    </select>
+    <select>
+      <option>اختر المحافظة</option>
+      <option>صنعاء</option>
+      <option>عدن</option>
+      <option>تعز</option>
+    </select>
+    <button>بحث</button>
+  </div>
+
+  <div class="ads-container">
+    <div class="ad-card">
+      <h3>🚗 تويوتا كورولا للبيع</h3>
+      <p>الموقع: صنعاء</p>
+      <p>السعر: 8000$</p>
+    </div>
+    <div class="ad-card">
+      <h3>🏠 شقة جديدة للبيع</h3>
+      <p>الموقع: عدن</p>
+      <p>السعر: 40000$</p>
+    </div>
+  </div>
+
+  <div style="padding: 20px">
+    <h2>📌 تفاصيل الإعلان</h2>
+    <p><strong>العنوان:</strong> سيارة تويوتا 2020 بحالة ممتازة</p>
+    <p><strong>الموقع:</strong> صنعاء</p>
+    <p><strong>السعر:</strong> 8000$</p>
+    <p><strong>الوصف:</strong> السيارة ماشية 30 ألف فقط، فحص وتأمين ساري، بحالة وكالة. للتواصل عبر الواتساب.</p>
+  </div>
+
+  <div id="addModal" style="display:none;">
+    <div class="modal-content">
+      <button class="close-btn" onclick="hideModal()">X</button>
+      <h3>📝 إضافة إعلان جديد</h3>
+      <input type="text" placeholder="العنوان">
+      <input type="text" placeholder="السعر">
+      <textarea placeholder="الوصف..."></textarea>
+      <input type="file">
+      <input type="text" placeholder="رقم التواصل (واتساب)">
+      <button class="submit-btn">نشر الإعلان</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
